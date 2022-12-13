@@ -1,6 +1,6 @@
 import { Fragment } from "react"
 import { FeedbackType, FeedbackTypes } from ".."
-import { CloseButton } from "../../CloseButton"
+import { CloseButton } from "../CloseButton"
 
 interface IFeedbackTypeStep {
     oneFeedbackTypeChanged: (type: FeedbackType) => void

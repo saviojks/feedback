@@ -1,4 +1,4 @@
-import { CloseButton } from "../CloseButton";
+import { CloseButton } from "./CloseButton";
 import bugImage from '../../assets/bug.svg'
 import ideaImage from '../../assets/idea.svg'
 import thoughtImage from '../../assets/thought.svg'
