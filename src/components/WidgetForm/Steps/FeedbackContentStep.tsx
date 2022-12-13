@@ -6,9 +6,10 @@ import { CloseButton } from "../CloseButton"
 
 interface IFeedbackContentStep {
     feedbackType: FeedbackType,
-    onFeedbackRestartRequested: () => void
+    onFeedbackRestartRequested: () => void,
+    onFeedbackSend: (feedback: true) => void
 }
-export function FeedbackContentStep({ feedbackType, onFeedbackRestartRequested }: IFeedbackContentStep) {
+export function FeedbackContentStep({ feedbackType, onFeedbackRestartRequested, onFeedbackSend }: IFeedbackContentStep) {
     const [screenshot, setScreenshot] = useState<string | null>(null)
     const [comment, setComment] = useState<string>('')
     const { title, image } = FeedbackTypes[feedbackType]
@@ -19,7 +20,7 @@ export function FeedbackContentStep({ feedbackType, onFeedbackRestartRequested }
             screenshot,
             comment
         });
-
+        onFeedbackSend(true)
     }
 
 
